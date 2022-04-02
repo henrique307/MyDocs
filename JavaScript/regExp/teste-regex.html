@@ -1,0 +1,29 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <h1 id="botao" >digita qualquer coisa eu vo pegar so os numero e vo botar no console</h1>
+        <button class="botao">Vai então</button>
+        <input class="cobaia" type="text">
+        <script>
+        var resultado = document.querySelector('.resultado')
+        var botao = document.querySelector('.botao')
+        // var listaNomes = [
+        //     {'nome':'henrique','sobrenome':'florencio'},
+        //     {'nome':'aline','sobrenome':'dos santos'}
+        // ]
+        // console.log(listaNomes)
+        
+        botao.addEventListener("click", function(){
+            var cobaia = document.querySelector('.cobaia').value
+            var soOsNum = []
+            var procura = /\d/g;
+
+            while (resultado = procura.exec(cobaia)){
+                soOsNum.push(resultado[0])
+            }
+            console.log(soOsNum)
+        });
+        </script>
+    </body>
+</html>
